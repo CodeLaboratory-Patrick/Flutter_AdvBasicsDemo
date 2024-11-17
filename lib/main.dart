@@ -18,8 +18,7 @@ void main() {
           ),
           child: const StartScreen(),
         ),
-      ),
-    ),
+      ),    ),
   );
 }
 
