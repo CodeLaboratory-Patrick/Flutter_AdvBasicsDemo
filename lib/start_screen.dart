@@ -14,6 +14,7 @@ class StartScreen extends StatelessWidget {
             width: 300,
             color: const Color.fromARGB(150, 255, 255, 255),
           ),
+          //Opacity option 1
           /*Opacity(
             opacity: 0.5,
             child: Image.asset(
@@ -25,6 +26,7 @@ class StartScreen extends StatelessWidget {
           const Text(
             'Learn Flutter the fun way!',
             style: TextStyle(
+              //Opacity option 2
               color: Color.fromARGB(255, 237, 223, 252),
               fontSize: 24,
             ),
