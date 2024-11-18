@@ -1821,6 +1821,9 @@ Color textColor = score >= 75 ? Colors.green : Colors.red;
 - **Avoid Nesting**: Do not overuse nested ternary expressions, as they can make the code harder to understand. Instead, use `if-else` or extract logic into separate methods for clarity.
 - **Use Proper Data Types**: Ensure that comparison operators are used with compatible data types to avoid unexpected behavior or runtime errors.
 
+## References and Useful Resources
+- [Control Flow Collections](https://github.com/dart-lang/language/blob/main/accepted/2.3/control-flow-collections/feature-specification.md): About Flutter Control Flow Collections.
+
 ### Summary
 Ternary expressions and comparison operators are powerful tools for handling conditional logic in Flutter. **Ternary expressions** offer a concise way to decide which widget or value to use based on a Boolean condition, making the code shorter and more readable for straightforward decisions. **Comparison operators** help control the flow of logic by evaluating conditions such as equality, greater-than, or less-than relationships, which are fundamental in decision-making processes. Mastering these tools allows for better, more dynamic Flutter applications.
 
