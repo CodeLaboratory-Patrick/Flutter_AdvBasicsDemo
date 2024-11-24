@@ -1,7 +1,8 @@
-import 'package:adv_basics/data/questions.dart';
 import 'package:flutter/material.dart';
+
 import 'package:adv_basics/start_screen.dart';
 import 'package:adv_basics/questions_screen.dart';
+import 'package:adv_basics/data/questions.dart';
 import 'package:adv_basics/results_screen.dart';
 
 class Quiz extends StatefulWidget {
@@ -44,16 +45,28 @@ class _QuizState extends State<Quiz> {
     }
   }
 
+  void restartQuiz() {
+    setState(() {
+      selectedAnswers = [];
+      activeScreen = 'questions-screen';
+    });
+  }
+
   @override
   Widget build(context) {
     Widget screenWidget = StartScreen(switchScreen);
 
     if (activeScreen == 'questions-screen') {
-      screenWidget = QuestionsScreen(onSelectAnswer: chooseAnswer);
+      screenWidget = QuestionsScreen(
+        onSelectAnswer: chooseAnswer,
+      );
     }
 
     if (activeScreen == 'results-screen') {
-      screenWidget = ResultsScreen(chosenAnswrs: selectedAnswers);
+      screenWidget = ResultsScreen(
+        chosenAnswers: selectedAnswers,
+        onRestart: restartQuiz,
+      );
     }
 
     return MaterialApp(
@@ -75,7 +88,6 @@ class _QuizState extends State<Quiz> {
     );
   }
 }
-
 
 /*class StartQuiz extends StatefulWidget {
   const StartQuiz({super.key});
